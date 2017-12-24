@@ -40,6 +40,7 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 .logo-box{
     position: absolute;
@@ -52,6 +53,9 @@ body{
 .heading-primary{
     color:#fff;
     text-transform: uppercase;
+    /* THIS IS A HACK THAT FIXES THE SHACKING ON THE ANIMATION */
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
 }
 .heading-primary-main{
     display:block;
@@ -105,4 +109,22 @@ body{
         opacity: 1;
         transform: translateX(0);
     }
+}
+.btn:link, 
+.btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:1rem 2.5rem;
+    display: inline-block;
+}
+.btn-white{
+    background: #fff;
+    color: #777;
+}
+.btn:hover{
+    transform:translateY(-3px);
+}
+/* when we click on an element */
+.btn:active{
+    transform:translateY(-1);
 }
