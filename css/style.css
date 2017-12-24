@@ -110,6 +110,15 @@ body{
         transform: translateX(0);
     }
 }
+@keyframes moveInBottom {
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .btn:link, 
 .btn:visited{
     text-decoration: none;
@@ -154,4 +163,9 @@ body{
   transform: scale(1.5);
   /*.btn::after has transition and this will take .04s for opacity to reach 0  */
   opacity:0;
+}
+btn-animated {
+    /* name,duration,effect,delay */
+    /* not driving every day this helps you remember wher the properties go */
+    animation: moveInBottom .5s ease-out .75s;
 }
