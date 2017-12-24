@@ -59,14 +59,25 @@ body{
     font-weight: 400;
     letter-spacing: 2rem;
 
-    animation-name: moveInaLeft;
-    animation-duration: 3s;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+    /* 
+    animation-delay: 3s wait 3seconds then start 
+    animation-iteration-count: 3; happens 3 times
+    animation-timing-function: ease-in;
+    */
+
 }
 .heading-primary-sub{
     display:block;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1rem;
+
+    animation: moveInRight 2s ease-out;
+    /* animation-name: moveInRight; */
 }
 
 @keyframes moveInLeft {
@@ -75,8 +86,20 @@ body{
         transform: translateX(-100px);
     }
     80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0%{
         opacity: 0;
-        transform: translateX(20);
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
     }
     100%{
         opacity: 1;
