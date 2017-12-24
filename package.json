@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cmburch/travelTours/issues"
   },
-  "homepage": "https://github.com/cmburch/travelTours#readme"
+  "homepage": "https://github.com/cmburch/travelTours#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
 }
