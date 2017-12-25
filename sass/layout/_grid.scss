@@ -6,14 +6,18 @@
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }
-    @include clearfix;
-    // #{} to use variables in the calc function
-    .col-1-0f-2{
-        width:calc((100% - #{$gutter-horizontal})/2);
+    [class^=col-] {
         background-color: orangered;
         float: left;
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-right: $gutter-horizontal;
         }
+    }
+    @include clearfix; // #{} to use variables in the calc function
+    .col-1-0f-2 {
+        width:calc((100% - #{$gutter-horizontal})/2);
+    }
+    .col-1-0f-3 {
+        width:calc((100%- 2*#{$gutter-horizontal})/2)
     }
 }
