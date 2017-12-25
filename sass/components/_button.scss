@@ -1,3 +1,4 @@
+// components are stand alone elements that are reuseable bundles of code
 .btn {
     &:link,
     &:visited {
@@ -18,7 +19,7 @@
     }
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.331);
+        box-shadow: 0 10px 20px rgba($color-black, 0.331);
         &::after {
             /* content and display are mandatory */
             transform: scale(1.5);
@@ -29,7 +30,7 @@
     /* when we click on an element */
     &:active {
         transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.131);
+        box-shadow: 0 5px 10px rgba($color-black, 0.131);
     }
     &::after {
         /* content and display are mandatory */
