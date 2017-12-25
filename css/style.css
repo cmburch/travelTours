@@ -30,21 +30,18 @@ body {
   /* this makes sure top of image is not cropped when resizing the window */
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.logo-box {
-  position: absolute;
-  top: 2.5rem;
-  left: 2.55rem; }
-
-.logo {
-  height: 2.2rem; }
+  .header_text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header_logo-box {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.55rem; }
+  .header_logo {
+    height: 2.2rem; }
 
 .heading-primary {
   color: #fff;
@@ -52,28 +49,26 @@ body {
   /* THIS IS A HACK THAT FIXES THE SHACKING ON THE ANIMATION */
   backface-visibility: hidden;
   margin-bottom: 3rem; }
-
-.heading-primary-main {
-  display: block;
-  font-size: 3.8rem;
-  font-weight: 400;
-  letter-spacing: 2rem;
-  animation-name: moveInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  /* 
-    animation-delay: 3s wait 3seconds then start 
-    animation-iteration-count: 3; happens 3 times
-    animation-timing-function: ease-in;
-    */ }
-
-.heading-primary-sub {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1rem;
-  animation: moveInRight 2s ease-out;
-  /* animation-name: moveInRight; */ }
+  .heading-primary-main {
+    display: block;
+    font-size: 3.8rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    /* 
+        animation-delay: 3s wait 3seconds then start 
+        animation-iteration-count: 3; happens 3 times
+        animation-timing-function: ease-in;
+        */ }
+  .heading-primary-sub {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    animation: moveInRight 2s ease-out;
+    /* animation-name: moveInRight; */ }
 
 @keyframes moveInLeft {
   0% {
@@ -103,54 +98,47 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1rem 2.5rem;
-  display: inline-block;
-  border-radius: 6.25rem;
-  transition: all .03s;
-  position: relative; }
-
-.btn-white {
-  background: #fff;
-  color: #777; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.331); }
-
-/* when we click on an element */
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.131); }
-
-.btn::after {
-  /* content and display are mandatory */
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 6.25rem;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: -1;
-  transition: all .4s; }
-
-.btn-white::after {
-  background: #fff; }
-
-.btn:hover::after {
-  /* content and display are mandatory */
-  transform: scale(1.5);
-  /*.btn::after has transition and this will take .04s for opacity to reach 0  */
-  opacity: 0; }
-
-.btn-animated {
-  /* name,duration,effect,delay */
-  /* not driving every day this helps you remember wher the properties go */
-  animation: moveInBottom .75s ease-in .75s;
-  /* I have a delay on  my animation that is Why i use fill-mode to apply the style on keyframe */
-  animation-fill-mode: backwards; }
+.btn {
+  /* when we click on an element */ }
+  .btn:link, .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    border-radius: 6.25rem;
+    transition: all .03s;
+    position: relative; }
+  .btn-white {
+    background: #fff;
+    color: #777; }
+    .btn-white::after {
+      background: #fff; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.331); }
+    .btn:hover::after {
+      /* content and display are mandatory */
+      transform: scale(1.5);
+      /*&::after has transition and this will take .04s for opacity to reach 0  */
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.131); }
+  .btn::after {
+    /* content and display are mandatory */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6.25rem;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    transition: all .4s; }
+  .btn-animated {
+    /* name,duration,effect,delay */
+    /* not driving every day this helps you remember wher the properties go */
+    animation: moveInBottom .75s ease-in .75s;
+    /* I have a delay on  my animation that is Why i use fill-mode to apply the style on keyframe */
+    animation-fill-mode: backwards; }
