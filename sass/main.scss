@@ -9,40 +9,6 @@
 
 @import "pages/home";
 
-
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-gray-dark: #777;
-;
-$color-white: #fff;
-$color-black: #000;
-
-/*
-scss highlight and refactor ⌘+Ctrl+E
-COLORS:
-
-Light green: $color-primary-light
-Medium green: $color-primary
-Dark green:$color-primary-dark
-
-*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: $color-gray-dark;
-    padding: 1.5rem;
-}
-
 .header {
     position: relative;
     height: 95vh;
@@ -99,44 +65,6 @@ body {
     }
 }
 
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    80% {
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    80% {
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .btn {
     &:link,
