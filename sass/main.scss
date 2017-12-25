@@ -1,19 +1,19 @@
-@import "abstracts/fuctions";
+@import "abstracts/functions";
 @import "abstracts/mixins";
-@import "abstracts/vaiables";
+@import "abstracts/variables";
 
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
-@import "component/button";
+@import "components/button";
 
 @import "layout/grid";
 @import "layout/header";
 
-@import "pages/home";
-
+@import "pages/home"; 
+  
 
 
 
