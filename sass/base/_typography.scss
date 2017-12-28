@@ -40,9 +40,31 @@ body {
 }
 
 .heading-secondary{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    display:inline-block;
-    background-image: linear-gradient()
+    display:inline-block;//this is an h2 element I dont won't this element to occupy 100% of the width
+    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;//this is shorthand for rgba(0,0,0,0) you this to see background 
+    letter-spacing: 2px;
+    transition: all .3s;
+
+    &:hover{
+        transform: skewY(1.7deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary{
+    font-size:1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: 1.2rem;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
 }
