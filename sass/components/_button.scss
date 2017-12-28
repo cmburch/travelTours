@@ -53,3 +53,20 @@
         animation-fill-mode: backwards;
     }
 }
+.btn-text{
+    &:link,
+    &:visited {
+        color: $color-primary;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 3px;
+        display: inline-block;
+        transition: all .03s;
+    }
+    &:hover{
+
+    }
+    &:active{
+
+    }
+}
