@@ -1,13 +1,16 @@
-.section-about{
-    background-color: $color-light-gray;
-    padding:21rem 0;
-    margin-top: -20vh;
-}
 
-.section-features{
-    padding:20rem 0;
-    background-image: linear-gradient( to right bottom, 
-    rgba($color-primary-light, 0.623), 
-    rgba($color-primary-dark, 0.76)), url(../img/nat.jpg);
-    background-size: cover;
-}
+
+.feature-box{
+    background-color: rgba($color-white, 0.76);
+    font-size:1.2rem;
+    padding: 2.1rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.2rem 2rem rgba($color-black, 0.16);
+    &_icon{
+
+    }
+    &_text{
+
+    }
+}  
