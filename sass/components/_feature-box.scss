@@ -1,16 +1,22 @@
-
-
-.feature-box{
+.feature-box {
     background-color: rgba($color-white, 0.76);
-    font-size:1.2rem;
+    font-size: 1.5rem;
     padding: 2.1rem;
     text-align: center;
-    border-radius: 3px;
-    box-shadow: 0 1.2rem 2rem rgba($color-black, 0.16);
-    &_icon{
+    border-radius: 4px;
+    box-shadow: 0 1.2rem 4rem rgba($color-black, 0.16);
+    transition: all .2s;
+    &_icon {
+        font-size: 5.2rem;
+        margin-bottom: .5rem;
+        display: inline-block; //this is an h2 element I dont won't this element to occupy 100% of the width
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; //this is shorthand for rgba(0,0,0,0) you this to see background 
+    }
+    &:hover{
+        transform:translateY(-1.5rem) scale(1.05);
 
     }
-    &_text{
-
-    }
-}  
+}
