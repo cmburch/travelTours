@@ -1,27 +1,51 @@
 .card {
     perspective: 150rem;
     -moz-perspective: 150rem; //define perspective on parent
+    position: relative;
+    height: 45rem; //the childern are absolute posiited aka: card_side parent collaspe this line is needed
     &_side {
-        background-color: orangered;
         color: $color-white; //test
         font-size: 2rem; //
         height: 45rem;
-        transition: all .9s;
-
+        transition: all .9s ease;
+        position: absolute; //taken out of flow of document and loses max-width inherited from the parent elemt
+        top: 0;
+        left: 0;
+        width: 100%; //card container width inherited from col- classes
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow:hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         &--front {
-            background-color: orangered;
+            background-color: $color-white;
         }
         &--back {
-            background-color: orangered;
-            color: $color-white; //test
-            font-size: 2rem; //
             transform: rotateY(180deg);
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
         }
     }
     &:hover &_side--front {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
     &:hover &_side--back {
-        transform: rotateY(180deg);
+        transform: rotateY(0);
+    }
+    //front side styling
+    &_picture {
+        background-size: cover;
+        height: 21rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+        }
+        &--2 {
+            background-image: url(../img/nat-5.jpg);
+        }
+        &--3 {
+            background-image: url(../img/nat-5.jpg);
+        }
     }
 }
