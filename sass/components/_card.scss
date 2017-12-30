@@ -2,11 +2,9 @@
     perspective: 150rem;
     -moz-perspective: 150rem; //define perspective on parent
     position: relative;
-    height: 45rem; //the childern are absolute posiited aka: card_side parent collaspe this line is needed
+    height: 47rem; //the childern are absolute posiited aka: card_side parent collaspe this line is needed
     &_side {
-        color: $color-white; //test
-        font-size: 2rem; //
-        height: 45rem;
+        height: 47rem;
         transition: all .9s ease;
         position: absolute; //taken out of flow of document and loses max-width inherited from the parent elemt
         top: 0;
@@ -14,7 +12,7 @@
         width: 100%; //card container width inherited from col- classes
         backface-visibility: hidden;
         border-radius: 3px;
-        overflow:hidden;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         &--front {
             background-color: $color-white;
@@ -31,13 +29,13 @@
     }
     &:hover &_side--back {
         transform: rotateY(0);
-    }
-    //front side styling
+    } //front side styling
     &_picture {
         background-size: cover;
         height: 21rem;
         background-blend-mode: screen;
-        clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); //don't use viewport hieght on this component
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); //don't use viewport hieght on this component
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
         }
@@ -46,6 +44,42 @@
         }
         &--3 {
             background-image: url(../img/nat-5.jpg);
+        }
+    }
+    &_heading {
+        font-size: 2.3rem;
+        font-weight: 300;
+        text-align: right;
+        color: $color-white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 10.2rem;
+        right: 2rem;
+        width: 75%; //this line make the text in the heading wrap
+    }
+    &_heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient( to right bottom, rgba($color-secondary-light, 0.88), rgba($color-secondary-dark, 0.89));
+        }
+    }
+    &_details {
+        padding:3rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin:0 auto;
+            li {
+                text-align: center;
+                font-size: 1.1rem;
+                padding: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid #eee;
+                }
+            }
         }
     }
 }
