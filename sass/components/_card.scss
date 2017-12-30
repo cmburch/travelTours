@@ -40,11 +40,11 @@
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
         }
         &--2 {
-            background-image: url(../img/nat-5.jpg);
-        }
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
+            url(../img/nat-6.jpg);        }
         &--3 {
-            background-image: url(../img/nat-5.jpg);
-        }
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
+            url(../img/nat-7.jpg);        }
     }
     &_heading {
         font-size: 2.3rem;
@@ -66,20 +66,41 @@
         }
     }
     &_details {
-        padding:3rem;
+        padding: 3rem;
         ul {
             list-style: none;
             width: 80%;
-            margin:0 auto;
+            margin: 0 auto;
             li {
                 text-align: center;
                 font-size: 1.1rem;
                 padding: 1rem;
-
-                &:not(:last-child){
+                &:not(:last-child) {
                     border-bottom: 1px solid #eee;
                 }
             }
-        }
+        } 
+    }
+    //back side styling
+    &_cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    &_price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 7rem;
+    }
+    &_price-only {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    &_price-value {
+        font-size: 8rem;
+        font-weight: 100;
     }
 }
