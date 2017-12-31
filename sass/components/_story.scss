@@ -25,7 +25,7 @@
         float: left;
         //don't use margin use translate to move element left
         //note: best way to move a floated element is to use translate and not margin
-
+        //only one tranform can be used at a time
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
@@ -47,9 +47,11 @@
     }
 
     &__img {
+        //all responsive img need a width property 
+        //since this img is large dont need to define width just the height in this case
         height: 100%;
-        transform: translateX(-4rem) scale(1.4);
-        backface-visibility: hidden;
+        transform: translateX(-4rem) scale(1.4);//moves the img to the left
+        backface-visibility: hidden;//this correct a glicth when using the translate property
         transition: all .5s;
     }
 
@@ -72,7 +74,7 @@
         text-align: center;
         opacity: 0;
         transition: all .5s;
-        backface-visibility: hidden;
+        backface-visibility: hidden;//stop letters from shaking during animation
     }
 
     &:hover &__caption {
@@ -81,7 +83,7 @@
     }
 
     &:hover &__img {
-        transform: translateX(-4rem) scale(1);
+        transform: translateX(-4rem) scale(1);//zoom out when hovered
         filter: blur(3px) brightness(80%);
     }
 }
