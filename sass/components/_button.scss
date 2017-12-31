@@ -18,6 +18,13 @@
             background: $color-white;
         }
     }
+    &-green {
+        background: $color-primary;
+        color: $color-white;
+        &::after {
+            background: $color-primary;
+        }
+    }
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba($color-black, 0.331);
@@ -34,6 +41,8 @@
         box-shadow: 0 5px 10px rgba($color-black, 0.131);
     }
     &::after {
+        //treated like the child of the parent element which is btn in this case
+        //width and height is from the parent element
         /* content and display are mandatory */
         content: '';
         display: inline-block;
