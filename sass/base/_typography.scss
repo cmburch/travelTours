@@ -35,12 +35,12 @@ body {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.7;
-    color: $color-gray-dark;
+    color: $color-grey-dark;
     padding: 1.5rem;
 }
 
 .heading-secondary{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     display:inline-block;//this is an h2 element I dont won't this element to occupy 100% of the width
@@ -48,7 +48,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;//this is shorthand for rgba(0,0,0,0) you this to see background 
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     transition: all .8s;
 
     &:hover{

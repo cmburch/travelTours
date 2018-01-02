@@ -2,7 +2,8 @@
     // width 1140 px
     max-width: $grid-width;
     // background-color: $color-light-gray;
-    margin: 0 auto;
+    margin: 0 auto;//center content
+
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }

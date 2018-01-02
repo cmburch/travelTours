@@ -1,5 +1,6 @@
 // components are stand alone elements that are reuseable bundles of code
 .btn {
+    &,
     &:link,
     &:visited {
         font-size: $default-font-size;
@@ -36,7 +37,9 @@
         }
     }
     /* when we click on an element */
-    &:active {
+    &:active,
+    &:focus {
+        outline:none;//remove blue box on button on form when clicked
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba($color-black, 0.131);
     }
