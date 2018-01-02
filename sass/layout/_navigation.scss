@@ -4,6 +4,9 @@
     }
 
     &__button {
+        //creates white button
+        //this button covers the background so height and width must be larger
+        width: 7rem;
         background-color: $color-white;
         height: 7rem;
         width: 7rem;
@@ -13,7 +16,7 @@
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
-        text-align: center;
+        text-align: center;//centers icon
         cursor: pointer;
 
         // @include respond(tab-port) {
@@ -28,8 +31,9 @@
     } 
 
     &__background {
+        //green background
         height: 6rem;
-        width: 6rem;
+        width: 6rem; 
         border-radius: 50%;
         position: fixed;
         top: 6.5rem;
@@ -53,16 +57,18 @@
     &__nav {
         height: 100vh;
         position: fixed;
+        // width: 100%;
         top: 0;
         left: 0;
         z-index: 1500;
 
         opacity: 0;
-        width: 0;
+        width: 0;//make links unclickable because this will still show when opacity is zero
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     &__list {
+        //child of nav nav 100vh center with top and left properties
         position: absolute;
         top: 50%;
         left: 50%;
@@ -119,8 +125,9 @@
     //ICON
     &__icon {
         position: relative;
-        margin-top: 3.5rem;
+        margin-top: 3.5rem;//move the icon vertical postion
 
+        //creates 3 uniformed bars for the nav
         &,
         &::before,
         &::after {
@@ -138,7 +145,7 @@
             transition: all .2s;
         }
 
-        &::before { top: -.8rem; }
+        &::before { top: -.8rem; }//transform origin changes the point of rotaion
         &::after { top: .8rem; }
     }
 
@@ -151,16 +158,16 @@
     }
 
     &__checkbox:checked + &__button &__icon {
-        background-color: transparent;
+        background-color: transparent;//do not change width and hieght because the before and after psuedo depends on these properties
     }
 
     &__checkbox:checked + &__button &__icon::before {
         top: 0;
-        transform: rotate(135deg);
+        transform: rotate(135deg);//45 works but 180-40 =135 this rotation gives you a more better rotating effect
     }
 
     &__checkbox:checked + &__button &__icon::after {
         top: 0;
-        transform: rotate(-135deg);
+        transform: rotate(-135deg);//-45
     }
 }

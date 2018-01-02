@@ -1,6 +1,6 @@
 // components are stand alone elements that are reuseable bundles of code
 .btn {
-    &,
+    &,//all btn class will have this property they dont have to be linked or visited
     &:link,
     &:visited {
         font-size: $default-font-size;
